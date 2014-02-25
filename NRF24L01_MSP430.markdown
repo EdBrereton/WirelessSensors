@@ -41,7 +41,7 @@ Pinout for NRF24L01+ breakout is below
 	- 25 x 47k resistors
 	- 25 x CR2032 battery holders
 
-![](img/NRF24L01_breadboard.jpg)
+![Image of the breadboarded setup (img/NRF24L01_breadboard.jpg)](img/NRF24L01_breadboard.jpg)
 
 
 
