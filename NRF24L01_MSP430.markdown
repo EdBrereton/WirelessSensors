@@ -1,0 +1,59 @@
+NRF24L01+ and MSP430
+====================
+
+##20th Feb 2015
+
+Enrf24 energia library works nicely. Have had sample app running with 2x Launchpads
+
+Default pinout for MSP430 is below
+
+    SCK		-> 	P1.5
+    MOSI 	-> 	P1.7
+    MISO 	-> 	P1.6
+    CE 		-> 	P2.0
+    CSN 	-> 	P2.1
+    IRQ		-> 	P2.2
+    
+Pinout for NRF24L01+ breakout is below
+
+    ---------------------------------
+    				|	8	|	7	|
+    				-----------------
+    				|	6	|	5	|
+    				-----------------
+    				|	4	|	3	|
+    				-----------------
+    				|	2	||	1  ||
+    ---------------------------------
+
+    		1. Gnd		2. Vcc (3V3)
+    		3. CE 		4. CSN
+    		5. SCK 		6. MOSI
+    		7. MISO		8. IRQ
+
+##25 Feb 2015
+- Successfully breadboarded basic circuit running off CR2032.
+- Range of breadboarded example is greater than the distance indoor at SMI
+	- No outdoor test performed because it was cold.
+- Ordered components for more prototypes
+	- 10 x MSP430G2553
+	- 10 x MSP430G2452
+	- 25 x 47k resistors
+	- 25 x CR2032 battery holders
+
+![](img/NRF24L01_breadboard.jpg)
+
+
+
+##Next Steps
+- Breadboard a basic MSP430 and NRF24L01 running off a CR2032 battery
+- Assemble a stripboard prototype(s) based off breadboard results
+- Assemble a USB -> MSP430 -> NRF24L01 base unit. Can be combination of cheapo USB -> UART and stripboard for now. Maybe look into etching circuitboard later.
+- Get working with temp sensor and get readings sent back with transmitter UID
+- Look into getting a SVG based map with colors served off PI
+- Investigate mesh routing with the NRF24L01/MSP430 combo.
+- Design generic board with pads for MSP430, NRF24L01+ and on board antenna.
+- Design generic board with pads for MSP430, NRF24L01+ and off board antenna.
+
+##Additional Notes
+- Logitech Unifying Reciever appears to use an NRF24LU chip which is another nordic 2.4GHz chip, and appears to be compatible with the L01(+) - be careful when testing at home. Don't want to annoy Gaby too much...
